@@ -1,0 +1,55 @@
+
+# Licensed under the CC BY-NC-SA 4.0 license (https://creativecommons.org/licenses/by-nc-sa/4.0/legalcode).
+
+dataset: celeba       #dataset we use
+img_size: 256         #image resolution, default=256
+id_dim: 512           #identity code dimension, default=512
+cuda_device: '1'      #cuda device we use
+
+    # weight for objective functions
+lambda_reg: 1         #type=float,  weight for R1 regularization
+lambda_recon: 1       #type=float,  weight for reconstruction loss
+lambda_att_face: 2    #type=float,  weight for attribute preservation loss (face)
+lambda_att_bg: 1      #type=float,  weight for attribute preservation loss (background)
+lambda_per: 1         #type=float, weight for perceptual loss
+lambda_id: 10         #type=float,  weight for identity reconstruction loss
+
+    # arguments
+total_iters: 60000    #type=int,  number of total iterations
+batch_size: 8         #type=int,  batch size for training
+lr: 0.0001            #type=float, learning rate for attribute encoder and discriminator
+id_lr: 0.0001         #type=float,  learning rate for identity encoder
+beta1: 0.0            #type=float,  decay rate for 1st moment of Adam
+beta2: 0.99           #type=float,  decay rate for 2nd moment of Adam
+weight_decay: 0.0001  #type=float,  weight decay for optimizer
+
+
+    # misc
+mode: 'train'         #type=str,  choices=['train', 'test']
+num_workers: 8        #type=int,  number of workers used in DataLoader
+
+    # directory for training
+train_img_dir: ['data/CelebA_Dataset/CelebA']         #type=str, directory containing training images
+sample_dir: 'expr/samples/CelebA/'                    #type=str, directory for saving generated images
+checkpoint_dir: 'expr/checkpoints/CelebA/'            #type=str, directory for saving network checkpoints
+log_dir: 'expr/logs/CelebA/'                          #type=str, directory for saving logs
+resume_iter: 0                                        #type=int, number of iterations to resume training
+
+    # directory for testing
+test_img_dir: 'data/FF++_Dataset/ff++'                 #type=str, directory containing testing images
+test_img_list: 'data/FF++_Dataset/face_swap_list.txt'  #type=str,  containing swapping images
+test_checkpoint_dir: 'pretrained_checkpoints/'         #type=str, directory for pretrained face swapping model
+test_checkpoint_name: 'faceswapper.ckpt'               #type=str, pretrained face swapping model name
+result_dir: 'expr/results/ff++/'                       #type=str,  directory for saving generated images
+post_process: True                                     #type=bool, whether we need the post process procedure or not
+
+    # pretrained face alignment  model
+wing_path: 'pretrained_checkpoints/wing.ckpt'
+face_model_path: 'pretrained_checkpoints/model_ir_se50.pth'
+
+    # step size
+print_every: 50                                        #type=int, number of iterations to print log info
+sample_every: 2000                                     #type=int,  number of iterations to display the results,  1000
+save_every: 5000                                       #type=int, number of iterations to save the checkpoint, 5000
+
+
