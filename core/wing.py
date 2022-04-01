@@ -435,6 +435,37 @@ class FAN(nn.Module):
         lipD = curve_fill(np.vstack([curves[11], curves[12][::-1]]), heatmapSize, sigma)
         tooth = curve_fill(np.vstack([curves[10], curves[11][::-1]]), heatmapSize, sigma)
         return np.stack([face, brow, eye, nose, lipU, lipD, tooth])
-
+    
+   @torch.no_grad()
+    def get_landmark_curve(self, x):  
+        heatmaps = self.get_heatmap(x, b_preprocess=False)
+        landmarks = []
+        for i in range(x.size(0)):
+            pred_landmarks = get_preds_fromhm(heatmaps[i].cpu().unsqueeze(0))
+            landmarks.append(pred_landmarks)
+        scale_factor = x.size(2) // heatmaps.size(2)
+        landmarks = torch.cat(landmarks) * scale_factor
+        batch_landmark_figure =[]
+        for i in range(0,len(x)):
+            dpi = 100
+            input = x[i] r
+            preds = landmarks[i]
+            fig = plt.figure(figsize=(input.shape[2] / dpi, input.shape[1] / dpi), dpi=dpi)
+            ax = fig.add_subplot(1, 1, 1)
+            ax.imshow(np.ones((input.shape[1],input.shape[2],input.shape[0])))
+            plt.subplots_adjust(left=0, right=1, top=1, bottom=0)
+            # eye
+            ax.plot(preds[60:68,0],preds[60:68,1],marker='',markersize=5,linestyle='-',color='red',lw=2)
+            ax.plot(preds[68:76,0],preds[68:76,1],marker='',markersize=5,linestyle='-',color='red',lw=2)
+            #outer and inner lip
+            ax.plot(preds[76:88,0],preds[76:88,1],marker='',markersize=5,linestyle='-',color='green',lw=2)
+            ax.plot(preds[88:96,0],preds[88:96,1],marker='',markersize=5,linestyle='-',color='blue',lw=2)
+            ax.axis('off')
+            fig.canvas.draw()
+            data = np.frombuffer(fig.canvas.tostring_rgb(), dtype=np.uint8)
+            data = data.reshape(fig.canvas.get_width_height()[::-1] + (3,))
+            batch_landmark_figure.append(data)
+            plt.close(fig)
+        return  batch_landmark_figure
 
 
