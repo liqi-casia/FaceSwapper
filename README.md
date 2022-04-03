@@ -49,9 +49,9 @@ pip install tensorboard tensorboardX
 ## Datasets and pre-trained checkpoints
 We provide a link to download datasets used in FaceSwapper and the corresponding pre-trained checkpoints. The datasets and checkpoints should be moved to the `data` and `expr/checkpoints` directories, respectively.
 
-* Datasets. Click here to download the [CelebA Dataset](https://pan.baidu.com/s/12KqrRI_K9frgky2YPNSJ0Q?pwd=wvy5) and the [FaceForensics++ Dataset](https://pan.baidu.com/s/1LcKJw2sGkEAHWjmTcxou-A?pwd=omkc).
+* Datasets. Click here to download the **CelebA Dataset** through [Baidu Netdisk](https://pan.baidu.com/s/12KqrRI_K9frgky2YPNSJ0Q?pwd=wvy5) or [Google Drive](https://drive.google.com/file/d/1W-FF-DNJ752L7Zqdm-otMT6frOcTLd7q/view?usp=sharing) and the **FaceForensics++ Dataset** through [Baidu Netdisk](https://pan.baidu.com/s/1LcKJw2sGkEAHWjmTcxou-A?pwd=omkc) or [Google Drive](https://drive.google.com/file/d/1Sa6v0m8s4xHXPPzeFt8K1q1n3T088Gvz/view?usp=sharing).
 
-* Checkpoints. Click here to download the [face recognition model](https://pan.baidu.com/s/11qcEiBjAsQPXwIqKjOE-rQ?pwd=2g78 ), the [face alignment model](https://pan.baidu.com/s/1htwmXDi2Gev8l09oJpr_Mg?pwd=ejmj), and the [face swapping model](https://pan.baidu.com/s/1aIRX0twylUJ42z4sYhUaVA?pwd=bkru).  
+* Checkpoints. Click here to download the **face recognition model** through [Baidu Netdisk](https://pan.baidu.com/s/11qcEiBjAsQPXwIqKjOE-rQ?pwd=2g78) or [Google Drive](https://drive.google.com/file/d/1-lxc-jZGIFNdwFUXQ9tDS9OSuhadj6AC/view?usp=sharing), the **face alignment model** through [Baidu Netdisk](https://pan.baidu.com/s/1htwmXDi2Gev8l09oJpr_Mg?pwd=ejmj) or [Google Drive](https://drive.google.com/file/d/1lBt4x4P5qaClB2ZN_POBV-ue41hdlaoJ/view?usp=sharing), and the **face swapping model** through [Baidu Netdisk](https://pan.baidu.com/s/1aIRX0twylUJ42z4sYhUaVA?pwd=bkru) or [Google Drive](https://drive.google.com/file/d/1Tb3V09wbaGe6SaiN3BZkOcCy7VJ0KYC8/view?usp=sharing).  
 
 After storing all the files, the directory structure of `./data` and `./pretrained_checkpoints` is expected as follows. 
 
