@@ -438,7 +438,7 @@ class FAN(nn.Module):
     
    @torch.no_grad()
     def get_landmark_curve(self, x):  
-        heatmaps = self.get_heatmap(x, b_preprocess=False)
+        heatmaps = self.get_heatmap(x)
         landmarks = []
         for i in range(x.size(0)):
             pred_landmarks = get_preds_fromhm(heatmaps[i].cpu().unsqueeze(0))
@@ -448,7 +448,7 @@ class FAN(nn.Module):
         batch_landmark_figure =[]
         for i in range(0,len(x)):
             dpi = 100
-            input = x[i] r
+            input = x[i] 
             preds = landmarks[i]
             fig = plt.figure(figsize=(input.shape[2] / dpi, input.shape[1] / dpi), dpi=dpi)
             ax = fig.add_subplot(1, 1, 1)
