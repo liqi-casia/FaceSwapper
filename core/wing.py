@@ -437,7 +437,7 @@ class FAN(nn.Module):
         tooth = curve_fill(np.vstack([curves[10], curves[11][::-1]]), heatmapSize, sigma)
         return np.stack([face, brow, eye, nose, lipU, lipD, tooth])
     
-   @torch.no_grad()
+    @torch.no_grad()
     def get_landmark_curve(self, x):  
         heatmaps = self.get_heatmap(x)
         landmarks = []
