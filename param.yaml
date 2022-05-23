@@ -4,7 +4,7 @@
 dataset: celeba       #dataset we use
 img_size: 256         #image resolution, default=256
 id_dim: 512           #identity code dimension, default=512
-cuda_device: '1'      #cuda device we use
+cuda_device: '0'      #cuda device we use
 
     # weight for objective functions
 lambda_reg: 1         #type=float,  weight for R1 regularization
@@ -16,7 +16,7 @@ lambda_id: 10         #type=float,  weight for identity reconstruction loss
 
     # arguments
 total_iters: 60000    #type=int,  number of total iterations
-batch_size: 8         #type=int,  batch size for training
+batch_size: 4         #type=int,  defalt=8,  batch size for training
 lr: 0.0001            #type=float, learning rate for attribute encoder and discriminator
 id_lr: 0.0001         #type=float,  learning rate for identity encoder
 beta1: 0.0            #type=float,  decay rate for 1st moment of Adam
@@ -26,7 +26,7 @@ weight_decay: 0.0001  #type=float,  weight decay for optimizer
 
     # misc
 mode: 'train'         #type=str,  choices=['train', 'test']
-num_workers: 8        #type=int,  number of workers used in DataLoader
+num_workers: 16        #type=int,  number of workers used in DataLoader
 
     # directory for training
 train_img_dir: ['data/CelebA_Dataset/CelebA']         #type=str, directory containing training images
@@ -51,5 +51,3 @@ face_model_path: 'pretrained_checkpoints/model_ir_se50.pth'
 print_every: 50                                        #type=int, number of iterations to print log info
 sample_every: 2000                                     #type=int,  number of iterations to display the results,  1000
 save_every: 5000                                       #type=int, number of iterations to save the checkpoint, 5000
-
-

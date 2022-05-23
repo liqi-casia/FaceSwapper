@@ -9,6 +9,7 @@ import os
 from os.path import join as ospj
 import time
 import datetime
+from tqdm import tqdm
 from munch import Munch
 import torch
 import torch.nn as nn
@@ -165,9 +166,10 @@ class Solver(nn.Module):
         total_iters = int(img_num/config['batch_size']) + 1
         save_dir=config['result_dir']
         test_fetcher = InputFetcher(loaders.src, 'test')
-        for i in range(0, total_iters):
+        for i in tqdm(range(0, total_iters)):
             inputs = next(test_fetcher)
             utils.disentangle_and_swapping_test(nets_ema, config, inputs, save_dir)
+
 
 def compute_d_loss(nets, config, x_a, x_b, x_a_lm, x_b_lm, x_a_mask, x_b_mask):
     x_a.requires_grad_()
