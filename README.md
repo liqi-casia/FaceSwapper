@@ -135,15 +135,15 @@ For technical, business and other inquiries, please contact qli@nlpr.ia.ac.cn.<b
 If you find this work useful for your research, please cite our paper:
 
 ```
-@misc{li2022learning,
-      title={Learning Disentangled Representation for One-shot Progressive Face Swapping}, 
-      author={Qi Li and Weining Wang and Chengzhong Xu and Zhenan Sun},
-      year={2022},
-      eprint={2203.12985},
-      archivePrefix={arXiv},
-      primaryClass={cs.CV}
+@article{li2024learning,
+  author={Li, Qi and Wang, Weining and Xu, Chengzhong and Sun, Zhenan and Yang, Ming-Hsuan},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence}, 
+  title={Learning Disentangled Representation for One-Shot Progressive Face Swapping}, 
+  year={2024},
+  volume={46},
+  number={12},
+  pages={8348-8364}
 }
-
 ```
 
 ## Acknowledgements
