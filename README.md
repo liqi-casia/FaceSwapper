@@ -83,7 +83,7 @@ After storing all the files, the directory structure of `./data` and `./pretrain
 After downloading the pre-trained checkpoints, you can synthesize swapped images. The following commands will save generated images to the `expr/results` directory. 
 
 
- <b>FaceForensics++ Dataset.</b> To generate swapped images, you need to specify the testing parameters in param.yaml (especially paramerters in *\#directory for testing* ). Then run the following command:
+ <b>FaceForensics++ Dataset.</b> To generate swapped images, you need to specify the testing parameters in param.yaml (especially change mode from 'train' to 'test', and pay attention to paramerters in *\#directory for testing* ). Then run the following command:
 ```bash
 python main.py 
 ```
@@ -114,7 +114,7 @@ Othewise, we simplely preserve the hair of the target image. You just need to Se
 ## Training networks
 
 
-To train FaceSwapper from scratch, just set  the training parameters in param.yaml, and run the following commands. Generated images and network checkpoints will be stored in the `expr/samples` and `expr/checkpoints` directories, respectively. Training usually takes about several days on a single Tesla V100 GPU depending on the total trainig iterations. 
+To train FaceSwapper from scratch, just set the training parameters in param.yaml (especially change mode from 'test' to 'train', and pay attention to paramerters in *\#directory for training* ), and run the following commands. Generated images and network checkpoints will be stored in the `expr/samples` and `expr/checkpoints` directories, respectively. Training usually takes about several days on a single Tesla V100 GPU depending on the total trainig iterations. 
 
 
 
