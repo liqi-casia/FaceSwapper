@@ -49,7 +49,7 @@ face_model_path: 'pretrained_checkpoints/model_ir_se50.pth'
 
     # step size
 print_every: 50                                        #type=int, number of iterations to print log info
-sample_every: 2000                                     #type=int,  number of iterations to display the results,  1000
+sample_every: 2000                                     #type=int,  number of iterations to display the results,  2000
 save_every: 5000                                       #type=int, number of iterations to save the checkpoint, 5000
 
 
