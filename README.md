@@ -9,7 +9,7 @@
 > In TPAMI 2024. <br>
 
 
-> Paper: [https://ieeexplore.ieee.org/abstract/document/10536627](https://ieeexplore.ieee.org/abstract/document/10536627)/<br>
+> Paper: [https://ieeexplore.ieee.org/abstract/document/10536627](https://ieeexplore.ieee.org/abstract/document/10536627)<br>
 
 
 > <p align="justify"> Although face swapping has attracted much attention in recent years, it remains a challenging problem. The existing methods leverage a large number of data samples to explore the intrinsic properties of face swapping without taking into account the semantic information of face images. Moreover, the representation of the identity information tends to be fixed, leading to suboptimal face swapping. In this paper, we present a simple yet efficient method named FaceSwapper, for one-shot face swapping based on Generative Adversarial Networks. Our method consists of a disentangled representation module and a semantic-guided fusion module. The disentangled representation module is composed of an attribute encoder and an identity encoder, which aims to achieve the disentanglement of the identity and the attribute information. The identity encoder is more flexible and the attribute encoder contains more details of the attributes than its competitors. Benefiting from the disentangled representation, FaceSwapper can swap face images progressively. In addition, semantic information is introduced into the semantic-guided fusion module to control the swapped area and model the pose and expression more accurately. The experimental results show that our method achieves state-of-the-art results on benchmark datasets with fewer training samples.</p>
