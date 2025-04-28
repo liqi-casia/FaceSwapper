@@ -5,7 +5,7 @@
 
 
 > **FaceSwapper: Learning Disentangled Representation for One-shot Progressive Face Swapping**<br>
-> [Qi Li](https://liqi-casia.github.io/), [Weining Wang](https://scholar.google.com/citations?hl=en&user=NDPvobAAAAAJ), [Chengzhong Xu](https://www.fst.um.edu.mo/people/czxu/), [Zhenan Sun](https://scholar.google.com.au/citations?user=PuZGODYAAAAJ&hl=en), [Ming-Hsuan Yang]([https://scholar.google.com/citations?user=p9-ohHsAAAAJ&hl=zh-CN]<br>
+> [Qi Li](https://liqi-casia.github.io/), [Weining Wang](https://scholar.google.com/citations?hl=en&user=NDPvobAAAAAJ), [Chengzhong Xu](https://www.fst.um.edu.mo/people/czxu/), [Zhenan Sun](https://scholar.google.com.au/citations?user=PuZGODYAAAAJ&hl=en), [Ming-Hsuan Yang](https://scholar.google.com/citations?user=p9-ohHsAAAAJ&hl=zh-CN)<br>
 > In TPAMI 2024. <br>
 
 
